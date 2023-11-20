@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Books = () => {
   const [books, setBooks] = useState([]);
@@ -29,6 +30,7 @@ const Books = () => {
     };
     fetchAllBooks();
   }, []);
+
   console.log(books);
 
   const handleDelete = async (book_id) => {
@@ -70,6 +72,12 @@ const Books = () => {
           </div>
         ))}
       </div>
+
+      <button className="addHome">
+        <Link to="/add" style={{ color: "inherit", textDecoration: "none" }}>
+          Add new book
+        </Link>
+      </button>
 
       <button className="addHome">
         <Link to="/add" style={{ color: "inherit", textDecoration: "none" }}>

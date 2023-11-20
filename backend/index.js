@@ -12,20 +12,18 @@ const db = mysql2.createConnection({
   database: "test",
 });
 
-app.use(express.json());
-app.use(cors());
-
 app.get("/", (req, res) => {
-  res.json("hello this is the backend yoyo");
+  res.json("hello");
 });
 
 app.get("/books", (req, res) => {
-  db.query("SELECT * FROM books", (err, result) => {
+  const q = "SELECT * FROM books";
+  db.query(q, (err, data) => {
     if (err) {
       console.log(err);
-    } else {
-      res.json(result);
+      return res.json(err);
     }
+    return res.json(data);
   });
 });
 
@@ -93,5 +91,5 @@ app.put("/books/:book_id", (req, res) => {
 });
 
 app.listen(8800, () => {
-  console.log("Backend server is running!");
+  console.log("Connected to backend.");
 });
