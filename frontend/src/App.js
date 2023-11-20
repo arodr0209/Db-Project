@@ -8,6 +8,7 @@ import {
 import Books from "./pages/Books";
 import Add from "./pages/Add";
 import Update from "./pages/Update";
+import "./style.css"
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Books />} />
           <Route path="/add" element={<Add />} />
-          <Route path="/update" element={<Update n />} />
+          <Route path="/update/:book_id" element={<Update />} />
         </Routes>
       </BrowserRouter>
     </div>

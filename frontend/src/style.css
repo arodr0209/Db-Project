@@ -1,0 +1,181 @@
+/* Body */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* App Container */
+  .App {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #343a40;
+  }
+  
+  /* Add to Home Button */
+  .addHome {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto; /* Center horizontally */
+  }
+  
+  .addHome:hover {
+    background-color: #0056b3;
+  }
+
+  
+  /* Books Container */
+  .books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+  }
+  
+  /* Book Card */
+  .book {
+    width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+  }
+  
+  .book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Book Image */
+  .book img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Book Title */
+  .book h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #343a40;
+  }
+  
+  /* Book Description */
+  .book p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+  }
+  
+  /* Action Buttons */
+  .book button {
+    padding: 8px 16px;
+    margin-top: 12px;
+    margin-right: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .book .delete {
+    background-color: #f8d7da;
+    color: #dc3545;
+  }
+  
+  .book .delete:hover {
+    background-color: #f5c6cb;
+  }
+  
+  .book .update {
+    background-color: #d4edda;
+    color: #28a745;
+  }
+  
+  .book .update:hover {
+    background-color: #c3e6cb;
+  }
+  
+  /* Form Container */
+  .form {
+    width: 500px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Form Title */
+  .form h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #343a40;
+  }
+  
+  /* Form Input Fields */
+  .form input,
+  .form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Form Submit Button */
+  .form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .form button:hover {
+    background-color: #0056b3;
+  }  
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
