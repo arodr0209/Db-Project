@@ -3,21 +3,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 const Books = () => {
   const [books, setBooks] = useState([]);
-  const [Book, setBook] = useState({
-      book_name: "",
-      description: "",
-      price: null,
-      cover: "",
-      number_in_stock: null,
-      department_category: "",
-      publisher_name: "",
-      author_name: "",
-    });
-
 
   useEffect(() => {
     const fetchAllBooks = async () => {
@@ -72,12 +60,6 @@ const Books = () => {
           </div>
         ))}
       </div>
-
-      <button className="addHome">
-        <Link to="/add" style={{ color: "inherit", textDecoration: "none" }}>
-          Add new book
-        </Link>
-      </button>
 
       <button className="addHome">
         <Link to="/add" style={{ color: "inherit", textDecoration: "none" }}>

@@ -1,6 +1,5 @@
 import axios from "axios";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Add = () => {
@@ -15,14 +14,14 @@ const Add = () => {
     author_name: "",
   });
 
-  const [error,setError] = useState(false)
+  const [error, setError] = useState(false);
 
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     setBook((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
-  
+
   const handleClick = async (e) => {
     e.preventDefault();
     try {
@@ -30,11 +29,11 @@ const Add = () => {
       navigate("/");
     } catch (err) {
       console.log(err);
-      setError(true)
+      setError(true);
     }
   };
 
-  console.log(book)
+  console.log(book);
 
   return (
     <div className="form">

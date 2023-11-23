@@ -1,34 +1,28 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
-import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Update = () => {
-  // const [book, setBook] = useState({
-  //   book_name: "",
-  //   description: "",
-  //   price: null,
-  //   cover: "",
-  //   number_in_stock: null,
-  //   department_category: "",
-  //   publisher_name: "",
-  //   author_name: "",
-  // });
+  const [book, setBook] = useState({
+    book_name: "",
+    description: "",
+    price: null,
+    cover: "",
+    number_in_stock: null,
+    department_category: "",
+    publisher_name: "",
+    author_name: "",
+  });
   
   const [error, setError] = useState(false);
 
   const location = useLocation();
   const navigate = useNavigate();
-  const book = location.state;
 
-
-  console.log(book)
   const bookId = location.pathname.split("/")[2];
 
   const handleChange = (e) => {
-    // setBook((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setBook((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleClick = async (e) => {
